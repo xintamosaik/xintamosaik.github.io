@@ -59,13 +59,21 @@ main {
 section {
   color: var(--color-black);
   background-color: var(--color-white);
-  margin: 9vh 3vw;
-  padding: 6vh 3vw;
+
+  padding: 15vh 6vw;
 }
 
+section#about {
+  background-color: #5750ff;
+  color: white;
+}
+
+section#about h1 {
+  color: #fa8674;
+}
 body {
   font-family: var(--text-font);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   background-color: var(--color-white-darker);
 }
 
@@ -75,20 +83,20 @@ h3 {
   padding-top: 0vh;
   margin-top: 3vh;
   font-family: var(--header-font);
-
+  line-height: 2;
   color: var(--accent-color);
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
 }
 
 p {
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 footer {
