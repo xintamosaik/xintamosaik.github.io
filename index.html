@@ -5,37 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ulf Dellbrügge - Full-Stack Web Developer</title>
     <style>
+      /* No preference */
+      :root {
+        --bg-primary: white;
+        --bg-secondary: #f5f5f5;
+
+        --text-primary: #333;
+        --text-secondary: black;
+
+        --highlight-primary: #007bff;
+        --highlight-secondary: #6c757d;
+
+        --box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+
+      /* Prefer Dark Mode */
+      @media (prefers-color-scheme: dark) {
         :root {
-            --bg-primary: white;
-            --bg-secondary: #f5f5f5;
+          --bg-primary: black;
+          --bg-secondary: #333;
 
-            --text-primary: #333;
-            --text-secondary: black;
+          --text-primary: white;
+          --text-secondary: #b7b7b7;
 
-            --highlight-primary: #007bff;
-            --highlight-secondary: #6c757d;
+          --highlight-primary: #ccff00;
+          --highlight-secondary: #747d6c;
 
-            --box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);   
-       
+          --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        /* No preference */
-  
-        /* Prefer Dark Mode */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-primary: black;
-                --bg-secondary: #333;
-            
-                --text-primary: white;
-                --text-secondary: #b7b7b7;
+      }
 
-                --highlight-primary: #ccff00;
-                --highlight-secondary: #747d6c;
-
-                --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            }
-        }
-    
       body {
         font-family: Arial, sans-serif;
         color: var(--text-primary);
@@ -43,7 +42,6 @@
         margin: 0;
         padding: 2vw;
         background-color: var(--bg-secondary);
-       
       }
 
       .container {
@@ -52,9 +50,6 @@
         gap: 2rem;
         max-width: 60ch;
         margin: 0 auto;
-      
-    
-      
       }
 
       h1,
@@ -64,6 +59,10 @@
       }
 
       p {
+        color: var(--text-primary);
+        line-height: 1.5;
+      }
+      ul li {
         color: var(--text-primary);
         line-height: 1.5;
       }
@@ -80,8 +79,8 @@
       section {
         background-color: var(--bg-primary);
         padding: 2rem;
-      
-        box-shadow:  var(--box-shadow);
+
+        box-shadow: var(--box-shadow);
       }
 
       .sub-section {
@@ -89,7 +88,7 @@
         padding-bottom: 2rem;
       }
       .sub-section:not(:last-child) {
-        border-bottom: 2px dotted  var(--text-secondary);
+        border-bottom: 2px dotted var(--text-secondary);
       }
 
       ul {
