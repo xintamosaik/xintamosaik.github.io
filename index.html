@@ -1,226 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ulf Dellbrügge - Full-Stack Web Developer</title>
-    <style>
-      /* No preference */
-      :root {
-        --bg-primary: white;
-        --bg-secondary: #f5f5f5;
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>about me</title>
+    <meta name="color-scheme" content="dark light"/>
 
-        --text-primary: #333;
-        --text-secondary: black;
-
-        --highlight-primary: #007bff;
-        --highlight-secondary: #6c757d;
-
-        --box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-      }
-
-      /* Prefer Dark Mode */
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg-primary: black;
-          --bg-secondary: #333;
-
-          --text-primary: white;
-          --text-secondary: #b7b7b7;
-
-          --highlight-primary: #ccff00;
-          --highlight-secondary: #747d6c;
-
-          --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        color: var(--text-primary);
-        font-size: 100%;
-        margin: 0;
-        padding: 2vw;
-        background-color: var(--bg-secondary);
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        max-width: 60ch;
-        margin: 0 auto;
-      }
-
-      h1,
-      h2,
-      h3 {
-        color: var(--text-secondary);
-      }
-
-      p {
-        color: var(--text-primary);
-        line-height: 1.5;
-      }
-      ul li {
-        color: var(--text-primary);
-        line-height: 1.5;
-      }
-
-      a {
-        color: var(--highlight-primary);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      section {
-        background-color: var(--bg-primary);
-        padding: 2rem;
-
-        box-shadow: var(--box-shadow);
-      }
-
-      .sub-section {
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-      }
-      .sub-section:not(:last-child) {
-        border-bottom: 2px dotted var(--text-secondary);
-      }
-
-      ul {
-        padding: 0 2ch;
-      }
-
-      ul li {
-        margin-bottom: 5px;
-      }
-
-      .experience-title {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <section>
-        <h1>Ulf Dellbrügge</h1>
-        <p><strong>Curious Full-Stack Web Developer</strong></p>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body style="display: flex; justify-content: center">
+<main style="width: 840px">
+    <h1>Code Monkey</h1>
+    <p>Hi, I'm Ulf.</p>
+    <p>I currently wrestle with Javascript.</p>
+    <p>I started coding BASIC on a Commodore 64 around 1990.</p>
+    <p>
+        In between I explored C, C++, Python, PHP, Object-oriented Programming,
+        Game Development, Linux Administration, LAMP, Procedural Graphics
+        Programming, Data Visualization, UI, UX, WordPress, AJAX, jQuery, React,
+        Next, GUI with QT, functional programming, LISP, Modding (Games),
+        No-Code, Low-Code, Design Patterns, HTML, CSS, Tailwind, Typescript,
+        Jest, Mocha, Vite, reverse engineering, golang, Java, Bootstrap, TDD,
+        Defensive Programming, Security, Refactoring, Hot Spot refactoring,
+        Linters, Static Code Analysis, Code Quality, Cognitive Complexity, git,
+        GitHub, gitflow, GitHub actions, S3, CI/CD, SVG and animation. The list
+        is not ordered neatly yet.
+    </p>
+    <p>
+        I also studied Social Work, Sociology, spent a lot of time with
+        workplace studies, Ethnomethodology and Psychology, Management related
+        topics like XP, agile and lean.
+    </p>
+    <p>
+        But it's actually not important anymore if I already dabbled with Elixir
+        or how familiar I am with concurrency. I plainly love development.
+        Learning new ways to get to the next level. Growing with a team. Foster
+        trustful relationships and usable pipelines that enable flowing and fun
+        iterations.
+    </p>
+    <section>
+        <h1>The soft in software</h1>
         <p>
-          <strong>Location:</strong> Düsseldorf, Nordrhein-Westfalen, Germany
+            We sometimes use the term 'hard coded' when writing something like
+            <code>const withTaxes = sum * 1.19</code>. The tax of 19% can change
+            and if it does, we have to find all the spots where this number was
+            used. In some cases the code might be written like this though:
+            <code>const total = sum * 19 / 100</code>. So we would miss it if we
+            searched the document for <i>1.19</i>. In this context most developers
+            would recognize what the number 19 means. But it could also be
+            something like this original piece of code from the source of
+            <i>Quake III Arena</i>:
+            <code> i = 0x5f3759df - ( i &gt;&gt; 1 ); // what the fuck?</code>
+            <a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root"
+            >(read more)</a
+            >
+            The comment at the end is telling. The tax number is pretty easy to
+            fix. Instead of writing the number, we use a variable. We can pass it
+            by value in the function where it is used. If we really 'need' to, we
+            could use a global variable, even if global variables are frowned
+            upon. If it was at least immutable, it would be difficult to do much
+            harm. In some cultures, devs use SCREAMING_CASE to mark globals. Then
+            we would write like this:
+            <code>const withTaxes = sum * TAX_RATE</code>. It sticks out quite a
+            lot. Which I like. Now everyone knows we are bad developers, because
+            we use globals ;). In a small application this could actually work ok.
+            It might not be the best idea anywhere else. Context does matter. It's
+            still better than writing out the number for anything but throw-away
+            code though.
         </p>
+
+        <h2>What's the point?</h2>
         <p>
-          <strong>Email:</strong>
-          <a href="mailto:ulfdellbruegge@gmail.com">ulfdellbruegge@gmail.com</a>
+            Well, yes. I mean, this is actually not a good example for hard
+            challenges in larger teams, because if not one person on a team sees a
+            problem in the use of 'magic numbers', I do not think it will survive
+            very long. I could be wrong, but that's my guts opinion. Magic numbers
+            are not the only and by far not the worst problem to have. They make
+            changes hard, but it's still pretty fixable. At least in the case of
+            simple numbers like a tax rate. The number in the fast inverse
+            square root algorithm that ID Software came up with is also actually
+            not a big problem as long as it is never changed and only used in one
+            place. Things do get more difficult when the meaning of a value is not
+            clear and even more difficult when they get used at seemingly random
+            places in the source code. I hope you can imagine why that could cause
+            pain.
         </p>
-        <p>
-          <strong>LinkedIn:</strong>
-          <a
-            href="https://www.linkedin.com/in/ulf-dellbr%C3%BCgge-95174918a"
-            target="_blank"
-            >ulf-dellbrügge</a
-          >
-        </p>
-      </section>
-      <section>
-        <h2>Summary</h2>
-        <p>
-          A self-taught, quality-obsessed full-stack web developer always ready
-          for the next coding challenge. Recently completed a Master's degree in
-          Sociology and currently taming wild ads for iq digital.
-        </p>
-      </section>
-
-      <section>
-        <h2>Experience</h2>
-
-        <div class="sub-section">
-          <h3>iq digital media marketing gmbh</h3>
-          <p class="experience-title">Web Developer</p>
-          <p>
-            January 2024 - Present (9 months)<br />Düsseldorf, North
-            Rhine-Westphalia, Germany
-          </p>
-        </div>
-
-        <div class="sub-section">
-          <h3>Qanuk GmbH</h3>
-          <p class="experience-title">Web Developer</p>
-          <p>
-            October 2022 - December 2023 (1 year 3 months)<br />Osnabrück,
-            Niedersachsen, Germany
-          </p>
-          <ul>
-            <li>
-              Developed custom admin tools, web applications, and WordPress
-              plugins.
-            </li>
-            <li>
-              Advised on coding standards and structured project workflows.
-            </li>
-          </ul>
-          <p class="experience-title">Full Stack Developer</p>
-          <p>
-            July 2021 - October 2022 (1 year 4 months)<br />Osnabrück,
-            Niedersachsen, Germany
-          </p>
-          <ul>
-            <li>
-              Developed web apps as plugins for WordPress focusing on the event
-              industry.
-            </li>
-            <li>
-              Led a project creating an app for managing invoices,
-              cancellations, and related tasks.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-
-        <div class="sub-section">
-          <h3>Universität Bielefeld</h3>
-          <p class="experience-title">Master of Arts - MA, Sociology</p>
-   
-        </div>
-
-
-      </section>
-
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>Golang, Typescript, Python, SQL, PHP, Java, C/C++</li>
-          <li>
-            Web Application Development, React, Tailwind, REST, AJAX, Htmx
-          </li>
-          <li>Node.js, WordPress, jQuery, Bootstrap</li>
-          <li>
-            Code Quality, Static Code Analysis, Tech Debt Management, Hot Spot
-            Refactoring, JSDoc, OOP, Design Patterns
-          </li>
-          <li>Git, GitHub, CI/CD, TDD, Dev-Sec-Ops</li>
-          <li>Agile Methodologies (Scrum, XP, Lean)</li>
-          <li>DORA and SPACE Metrics</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Certifications (Selection)</h2>
-        <ul>
-          <li>Learn PHP Course</li>
-          <li>Learn Git & GitHub Course</li>
-          <li>Learn CSS Course</li>
-          <li>Learn JavaScript Course</li>
-          <li>Learn jQuery Course</li>
-        </ul>
-      </section>
-    </div>
-  </body>
+        <p>Sorry, I'm still cooking.</p>
+    </section>
+</main>
+</body>
 </html>

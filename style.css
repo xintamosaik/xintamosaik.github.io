@@ -1,0 +1,41 @@
+:root {
+    --color-background: lavenderblush;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: darkslategray;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2,
+h3 {
+    font-family: sans-serif;
+    padding-top: 1ch;
+}
+
+p {
+    line-height: 1.5;
+}
+
+@media only screen and (min-width: 600px) {
+    section p {
+        columns: 2;
+        column-gap: 4ch;
+    }
+}
+
+code {
+    background-color: var(--color-background);
+}
+
+html {
+    font-size: 100%;
+}
