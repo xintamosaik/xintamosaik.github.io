@@ -7,10 +7,19 @@
     <title>Ulf Dellbrügge | Web Dev</title>
     <meta name="color-scheme" content="dark light" />
 
-    <style>
+    <style id="root">
+        html {
+            --text-line-height: normal;
+        }
+
         p {
-            font-family: sans-serif;
-            line-height: 1.5;
+            line-height: var(--text-line-height)
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
         }
     </style>
     <script>
@@ -28,14 +37,55 @@
                 ? "🌙"
                 : "☀️"
         }
+
+        function setFont(e) {
+            document.body.style.fontFamily = e.target.value
+        }
+
+        function adjustLineHeight(e) {
+            document.documentElement.style.setProperty('--text-line-height', `${e.target.value}`)
+        }
+
     </script>
+
 </head>
 
-<body style="display: flex; justify-content: center">
+<body style="display: flex; flex-direction: column; align-items: center; line-height: normal">
+    <button popovertarget="settings" popovertargetaction="toggle" style="position: align-self; position:absolute; align-self:flex-end;">⚙️</button>
+    <dialog id="settings" popover>
+        <div style="display: flex; flex-direction: column; padding: 2ch;">
+
+            <span>
+                dark/light
+                <button onclick="toggleColorScheme(event)">☀️</button>
+            </span>
+            <span onclick="setFont(event)" oninput="setFont(event)">
+                font
+                <button value="auto">auto</button>
+                <button value="sans">sans</button>
+                <button value="sans-serif">sans-serif</button>
+                <input type="text" placeholder="Name of your favorite font" />
+            </span>
+            <label for="line-height">line-height
+                <input type="range" name="line-height" id="line-height" min="1.1" max="2.2" step="0.1"
+                    oninput="adjustLineHeight(event)" />
+            </label>
+            
+        </div>
+        <button popovertarget="settings" popovertargetaction="hide">close</button>
+
+
+    </dialog>
+
+
     <main style="width: 840px">
-        <button onclick="toggleColorScheme(event)"
-            style="border: none; background-color: transparent; cursor: pointer;">☀️</button>
-        <h1>Code Monkey</h1>
+
+
+
+        <h1>
+           
+            Code Monkey
+        </h1>
         <p>Hi, I'm Ulf.</p>
         <p>I currently wrestle with Javascript.</p>
         <p>I started coding BASIC on a Commodore 64 around 1990.</p>
