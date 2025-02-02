@@ -4,162 +4,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Me, in a nutshell">
+    <meta name="keywords" content="web development">
     <title>Ulf Dellbrügge | Web Dev</title>
     <meta name="color-scheme" content="dark light" />
 
-    <style id="root">
-        html {
-            --text-line-height: normal;
-        }
-
+    <style>
         p {
-            line-height: var(--text-line-height)
-        }
-
-        button {
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
+            line-height: 1.7;
         }
     </style>
-    <script>
-        function toggleColorScheme(event) {
-            const colorScheme = document.querySelector('meta[name="color-scheme"]')
-            if (!colorScheme) return;
-
-            const lightsOn = colorScheme.content === "light"
-            colorScheme.content = !lightsOn
-                ? "light"
-                : "dark"
-
-
-            event.target.innerText = !lightsOn
-                ? "🌙"
-                : "☀️"
-        }
-
-        function setFont(e) {
-            document.body.style.fontFamily = e.target.value
-        }
-
-        function adjustLineHeight(e) {
-            document.documentElement.style.setProperty('--text-line-height', `${e.target.value}`)
-        }
-
-    </script>
-
 </head>
 
-<body style="display: flex; flex-direction: column; align-items: center; line-height: normal">
-    <button popovertarget="settings" popovertargetaction="toggle" style="position: align-self; position:absolute; align-self:flex-end;">⚙️</button>
-    <dialog id="settings" popover>
-        <div style="display: flex; flex-direction: column; padding: 2ch;">
-
-            <span>
-                dark/light
-                <button onclick="toggleColorScheme(event)">☀️</button>
-            </span>
-            <span onclick="setFont(event)" oninput="setFont(event)">
-                font
-                <button value="auto">auto</button>
-                <button value="sans">sans</button>
-                <button value="sans-serif">sans-serif</button>
-                <input type="text" placeholder="Name of your favorite font" />
-            </span>
-            <label for="line-height">line-height
-                <input type="range" name="line-height" id="line-height" min="1.1" max="2.2" step="0.1"
-                    oninput="adjustLineHeight(event)" />
-            </label>
-            
-        </div>
-        <button popovertarget="settings" popovertargetaction="hide">close</button>
-
-
-    </dialog>
-
-
-    <main style="width: 840px">
-
-
-
-        <h1>
-           
-            Code Monkey
-        </h1>
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <main style="width: min(100%, 70ch)">
+        <h1>Ulf Dellbrügge | Web Dev</h1>
         <p>Hi, I'm Ulf.</p>
-        <p>I currently wrestle with Javascript.</p>
+        
         <p>I started coding BASIC on a Commodore 64 around 1990.</p>
-        <p>
-            In between I explored C, C++, Python, PHP, Object-oriented Programming,
-            Game Development, Linux Administration, LAMP, Procedural Graphics
-            Programming, Data Visualization, UI, UX, WordPress, AJAX, jQuery, React,
-            Next, GUI with QT, functional programming, LISP, Modding (Games),
-            No-Code, Low-Code, Design Patterns, HTML, CSS, Tailwind, Typescript,
-            Jest, Mocha, Vite, reverse engineering, golang, Java, Bootstrap, TDD,
-            Defensive Programming, Security, Refactoring, Hot Spot refactoring,
-            Linters, Static Code Analysis, Code Quality, Cognitive Complexity, git,
-            GitHub, gitflow, GitHub actions, S3, CI/CD, SVG and animation. The list
-            is not ordered neatly yet.
-        </p>
-        <p>
-            I also studied Social Work, Sociology, spent a lot of time with
-            workplace studies, Ethnomethodology and Psychology, Management related
-            topics like XP, agile and lean.
-        </p>
-        <p>
-            But it's actually not important anymore if I already dabbled with Elixir
-            or how familiar I am with concurrency. I plainly love development.
-            Learning new ways to get to the next level. Growing with a team. Foster
-            trustful relationships and usable pipelines that enable flowing and fun
-            iterations.
-        </p>
-        <section>
-            <h1>The soft in software</h1>
-            <p>
-                We sometimes use the term 'hard coded' when writing something like
-                <code>const withTaxes = sum * 1.19</code>. The tax of 19% can change
-                and if it does, we have to find all the spots where this number was
-                used. In some cases the code might be written like this though:
-                <code>const total = sum * 19 / 100</code>. So we would miss it if we
-                searched the document for <i>1.19</i>. In this context most developers
-                would recognize what the number 19 means. But it could also be
-                something like this original piece of code from the source of
-                <i>Quake III Arena</i>:
-                <code> i = 0x5f3759df - ( i &gt;&gt; 1 ); // what the fuck?</code>
-                <a href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">(read more)</a>
-                The comment at the end is telling. The tax number is pretty easy to
-                fix. Instead of writing the number, we use a variable. We can pass it
-                by value in the function where it is used. If we really 'need' to, we
-                could use a global variable, even if global variables are frowned
-                upon. If it was at least immutable, it would be difficult to do much
-                harm. In some cultures, devs use SCREAMING_CASE to mark globals. Then
-                we would write like this:
-                <code>const withTaxes = sum * TAX_RATE</code>. It sticks out quite a
-                lot. Which I like. Now everyone knows we are bad developers, because
-                we use globals ;). In a small application this could actually work ok.
-                It might not be the best idea anywhere else. Context does matter. It's
-                still better than writing out the number for anything but throw-away
-                code though.
-            </p>
-
-            <h2>What's the point?</h2>
-            <p>
-                Well, yes. I mean, this is actually not a good example for hard
-                challenges in larger teams, because if not one person on a team sees a
-                problem in the use of 'magic numbers', I do not think it will survive
-                very long. I could be wrong, but that's my guts opinion. Magic numbers
-                are not the only and by far not the worst problem to have. They make
-                changes hard, but it's still pretty fixable. At least in the case of
-                simple numbers like a tax rate. The number in the fast inverse
-                square root algorithm that ID Software came up with is also actually
-                not a big problem as long as it is never changed and only used in one
-                place. Things do get more difficult when the meaning of a value is not
-                clear and even more difficult when they get used at seemingly random
-                places in the source code. I hope you can imagine why that could cause
-                pain.
-            </p>
-            <p>Sorry, I'm still cooking.</p>
-        </section>
+        <p>Fell in love with development. Still happily tightly coupled.</p>
     </main>
 </body>
 
