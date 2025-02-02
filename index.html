@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 100%">
+<html lang="en" style="font-size: 100%; font-family: monospace;">
 
 <head>
     <meta charset="UTF-8" />
@@ -13,16 +13,26 @@
         p {
             line-height: 1.7;
         }
+        section {
+            width: min(100%, 70ch);
+            margin: 0 auto;
+            padding: 0 2ch;
+        }
     </style>
 </head>
 
-<body style="display: flex; flex-direction: column; align-items: center;">
-    <main style="width: min(100%, 70ch)">
-        <h1>Ulf Dellbrügge | Web Dev</h1>
-        <p>Hi, I'm Ulf.</p>
+<body style="background-color: black; margin: 0;">
+    <main style="display: flex; flex-direction: column;">
+        <section style="background-color: white;">
+            <hgroup>
+                <h1>Ulf Dellbrügge | WEB DEV</h1>
+                <p>Hi, I'm Ulf.</p>    
+            </hgroup>
+            
+            <p>I started coding BASIC on a Commodore 64 around 1990.</p>
+            <p>Fell in love with development. Still happily tightly coupled.</p>
+        </section>
         
-        <p>I started coding BASIC on a Commodore 64 around 1990.</p>
-        <p>Fell in love with development. Still happily tightly coupled.</p>
     </main>
 </body>
 
