@@ -14,6 +14,7 @@
             font-family: Helvetica, "Calibri", 'Segoe UI', Verdana, Arial, "Noto Sans", "Roboto", sans-serif;
             font-size: 100%;
         }
+
         li,
         p {
             line-height: 1.5;
@@ -26,11 +27,29 @@
         h2 {
             font-weight: bolder;
         }
-        header, main, footer {
-            display: flex; 
-            flex-direction: column; 
-            gap: 2rem; 
+
+        header,
+        main,
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
             margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (prefers-color-scheme: light) {
+            a {
+                color: darkblue;
+            }
         }
     </style>
 </head>
@@ -181,13 +200,13 @@
 </main>
 <footer>
     <h2>Contact</h2>
-   
-        <span>Ulf Dellbrügge</span>
-        <a href="mailto:ulfdellbruegge@gmail.com">ulfdellbruegge@gmail.com</a>
-        <a href="https://www.linkedin.com/in/ulf-dellbr%C3%BCgge-95174918a/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/xintamosaik" target="_blank">GitHub</a>
-        <span>Düsseldorf, Germany</span>
-    
+
+    <span>Ulf Dellbrügge</span>
+    <a href="mailto:ulfdellbruegge@gmail.com">ulfdellbruegge@gmail.com</a>
+    <a href="https://www.linkedin.com/in/ulf-dellbr%C3%BCgge-95174918a/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/xintamosaik" target="_blank">GitHub</a>
+    <span>Düsseldorf, Germany</span>
+
 </footer>
 </body>
 
