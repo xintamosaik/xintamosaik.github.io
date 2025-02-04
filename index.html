@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light" />
+
     <meta name="keywords" content="software engineer web development frontend backend" />
     <meta name="description" content="Me, in a nutshell">
     <title>Portfolio | UD</title>
@@ -15,199 +15,267 @@
             font-size: 100%;
         }
 
+        body {
+            margin: 0
+        }
+
+
+        section {
+            padding: 2rem 0;
+  
+    
+        }
+
+        section>div.container {
+            width: min(70ch, 100%);
+            margin: 0 auto;
+            padding: 1ch;
+        }
+
+
+
+        hr {
+            border: none;
+            border-bottom-width: 2rem;    
+            border-bottom-style:dotted;
+            border-bottom-color: white;
+        }
+
         li,
         p {
             line-height: 1.5;
         }
 
+        ul {
+            padding-inline-start: 3ch;
+        }
+
         li {
             margin-bottom: 1.5rem;
+        
         }
 
         h2 {
             font-weight: bolder;
         }
 
-        header,
-        main,
-        footer {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
 
         a {
             text-decoration: none;
-            color: yellow;
+            color:rgb(200, 0, 200);
+            font-weight: bolder;
+        }
+
+        a:visited {
+            color:rgb(124, 0, 124);
+            font-weight: normal;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        @media (prefers-color-scheme: light) {
-            a {
-                color: darkblue;
-            }
+        #intro {
+            background-color:rgb(255, 129, 167);
         }
+
+        #experience {
+            background-color: rgb(71, 255, 187);
+        }
+
+        #education {
+            background-color:rgb(234, 255, 0);
+        }
+
+
     </style>
 </head>
 
 
-<body style="width: min(70ch, 100%); margin: 0 auto;"></body>
+<body>
 
 
-<header>
-    <hgroup>
-        <h1>Aspiring Software Engineer</h1>
-        <p>Hi, I'm Ulf.</p>
-    </hgroup>
-    <div>
-        <p>I started coding BASIC on a Commodore 64 around 1990.</p>
-        <p>Fell in love with development. Still happily tightly coupled.</p>
-    </div>
-</header>
+    <header>
+        <section id="intro">
+            <div class="container">
+                <hgroup>
+                    <h1>Aspiring Software Engineer</h1>
+                    <p>Hi, I'm Ulf.</p>
+                </hgroup>
+                <div>
+                    <p>I started coding BASIC on a Commodore 64 around 1990.</p>
+                    <p>Fell in love with development. Still happily tightly coupled.</p>
+                </div>
+            </div>
+        </section>
+    </header>
 
-<main>
-    <section id="summary">
-        <p>
-            Results-driven Web Developer with a strong track record of delivering innovative, scalable, and
-            maintainable solutions. Combines technical expertise in TypeScript and modern development practices with
-            a unique perspective from sociology, fostering systemic problem-solving and team collaboration.
-            Proficient in building robust web applications, optimizing legacy systems, and driving Agile
-            methodologies. Passionate about contributing to impactful projects in dynamic, high-performing teams.
-        </p>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <div>
-            <h3>
-                <span>Web Developer</span>
-                <span class="dash"></span>
-                <span>iq digital media marketing gmbh</span>
-            </h3>
-            <h4>
-                <span>Jan 2024 - Present</span>
-                <span class="dash"></span>
+    <main>
+        <section id="summary">
+            <div class="container">
+                <p>
+                    Results-driven Web Developer with a strong track record of delivering innovative, scalable, and
+                    maintainable solutions. Combines technical expertise in TypeScript and modern development practices
+                    with
+                    a unique perspective from sociology, fostering systemic problem-solving and team collaboration.
+                    Proficient in building robust web applications, optimizing legacy systems, and driving Agile
+                    methodologies. Passionate about contributing to impactful projects in dynamic, high-performing
+                    teams.
+                </p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <h2>Experience</h2>
+            </div>
+
+            <div class="container">
+                <div>
+                    <h3>
+                        <span>Web Developer</span>
+                        <span>|</span>
+                        <span>iq digital media marketing gmbh</span>
+                    </h3>
+                    <h4>
+                        <span>Jan 2024 - Present</span>
+                        <span>|</span>
+                        <span>Düsseldorf, Germany</span>
+                    </h4>
+
+                    <ul>
+                        <li>
+                            Introduced and championed TypeScript, improving code quality and reducing error rates.
+                        </li>
+                        <li>
+                            Designed and implemented a <strong>template builder</strong>, cutting development time by
+                            <strong>30%</strong> and streamlining processes.
+                        </li>
+                        <li>
+                            Developed the <strong>"skyMover"</strong> system, ensuring reliable ad placements and
+                            reducing
+                            legacy code by <strong>2,000+ lines</strong>.
+                        </li>
+                        <li>
+                            Built a <strong>new ad controller</strong>, enabling CI/CD workflows and reducing reliance
+                            on
+                            restrictive third-party systems.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+
+                <div>
+                    <h3>
+                        <span>Full Stack Developer</span>
+                        <span>|</span>
+                        <span>Qanuk GmbH</span>
+                    </h3>
+                    <h4>
+                        <span>July 2021 - December 2023</span>
+                        <span>|</span>
+                        <span>Osnabrück, Niedersachsen, Germany</span>
+                    </h4>
+
+                    <ul>
+                        <li>
+                            <strong>Implemented a scalable and dynamic search UI</strong> connecting 3rd party APIs and
+                            scraped articles over Elastic.
+                        </li>
+                        <li>
+                            Built a <strong>geolocation-based search UI</strong> for medicinical practitioners through
+                            custom WordPress plugins.
+                        </li>
+                        <li>
+                            Led the development of a <strong>WordPress plugin</strong> for managing invoices,
+                            cancellations,
+                            and event-specific tasks.
+                        </li>
+                        <li>
+                            Integrated <strong>AJAX, jQuery</strong>, and <strong>REST APIs</strong>, improving
+                            interactivity and performance.
+                        </li>
+                        <li>
+                            Mentored team members and promoted collaborative development practices, boosting team
+                            productivity.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <strong>Languages:</strong> TypeScript, Golang, JavaScript, CSS
+                    </li>
+                    <li>
+                        <strong>Frameworks:</strong> React, Tailwind
+                    </li>
+                    <li>
+                        <strong>Tools/Platforms:</strong> Git, Docker, Github Actions
+                    </li>
+                    <li>
+                        <strong>Methodologies:</strong> Agile, Pair Programming, TDD/BDD
+                    </li>
+                </ul>
+            </div>
+
+
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+
+                <div>
+                    <h3>
+                        <span>Master of Arts in Sociology</span>
+                        <span>|</span>
+                        <span>Universität Bielefeld</span>
+                    </h3>
+                    <h4>
+
+                        <span>Bielefeld, NRW, Germany</span>
+                    </h4>
+                    <p>Specialization: Qualitative Studies and Workplace Studies/Ethnomethodology</p>
+                </div>
+                </div>
+                <hr>
+                <div class="container">
+                <div>
+                    <h3>
+                        <span>Bachelor of Arts in Social Work</span>
+                        <span>|</span>
+                        <span>Universität Vechta</span>
+                    </h3>
+                    <h4>
+
+                        <span>Vechta, Niedersachsen, Germany</span>
+                    </h4>
+                    <p>Specialization: Counselling and Employment Dynamics</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <span>Ulf Dellbrügge</span>
+                <a href="mailto:ulfdellbruegge@gmail.com">ulfdellbruegge@gmail.com</a>
+                <a href="https://www.linkedin.com/in/ulf-dellbr%C3%BCgge-95174918a/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/xintamosaik" target="_blank">GitHub</a>
                 <span>Düsseldorf, Germany</span>
-            </h4>
+            </div>
+        </section>
 
-            <ul>
-                <li>
-                    Introduced and championed TypeScript, improving code quality and reducing error rates.
-                </li>
-                <li>
-                    Designed and implemented a <strong>template builder</strong>, cutting development time by
-                    <strong>30%</strong> and streamlining processes.
-                </li>
-                <li>
-                    Developed the <strong>"skyMover"</strong> system, ensuring reliable ad placements and reducing
-                    legacy code by <strong>2,000+ lines</strong>.
-                </li>
-                <li>
-                    Built a <strong>new ad controller</strong>, enabling CI/CD workflows and reducing reliance on
-                    restrictive third-party systems.
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3>
-                <span>Full Stack Developer</span>
-                <span class="dash"></span>
-                <span>Qanuk GmbH</span>
-            </h3>
-            <h4>
-                <span>July 2021 - December 2023</span>
-                <span class="dash"></span>
-                <span>Osnabrück, Niedersachsen, Germany</span>
-            </h4>
-
-            <ul>
-                <li>
-                    <strong>Implemented a scalable and dynamic search UI</strong> connecting 3rd party APIs and
-                    scraped articles over Elastic.
-                </li>
-                <li>
-                    Built a <strong>geolocation-based search UI</strong> for medicinical practitioners through
-                    custom WordPress plugins.
-                </li>
-                <li>
-                    Led the development of a <strong>WordPress plugin</strong> for managing invoices, cancellations,
-                    and event-specific tasks.
-                </li>
-                <li>
-                    Integrated <strong>AJAX, jQuery</strong>, and <strong>REST APIs</strong>, improving
-                    interactivity and performance.
-                </li>
-                <li>
-                    Mentored team members and promoted collaborative development practices, boosting team
-                    productivity.
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>
-                <strong>Languages:</strong> TypeScript, Golang, JavaScript, CSS
-            </li>
-            <li>
-                <strong>Frameworks:</strong> React, Tailwind
-            </li>
-            <li>
-                <strong>Tools/Platforms:</strong> Git, Docker, Github Actions
-            </li>
-            <li>
-                <strong>Methodologies:</strong> Agile, Pair Programming, TDD/BDD
-            </li>
-        </ul>
-
-    </section>
-
-    <section>
-
-        <h2>Education</h2>
-
-        <div class="education entry">
-            <h3>
-                <span>Master of Arts in Sociology</span>
-                <span class="dash"></span>
-                <span>Universität Bielefeld</span>
-            </h3>
-            <h4>
-                <span class="dash"></span>
-                <span>Bielefeld, NRW, Germany</span>
-            </h4>
-            <p>Specialization: Qualitative Studies and Workplace Studies/Ethnomethodology</p>
-        </div>
-
-        <div class="education entry">
-            <h3>
-                <span>Bachelor of Arts in Social Work</span>
-                <span class="dash"></span>
-                <span>Universität Vechta</span>
-            </h3>
-            <h4>
-                <span class="dash"></span>
-                <span>Vechta, Niedersachsen, Germany</span>
-            </h4>
-            <p>Specialization: Counselling and Employment Dynamics</p>
-        </div>
-    </section>
-</main>
-<footer>
-    <h2>Contact</h2>
-
-    <span>Ulf Dellbrügge</span>
-    <a href="mailto:ulfdellbruegge@gmail.com">ulfdellbruegge@gmail.com</a>
-    <a href="https://www.linkedin.com/in/ulf-dellbr%C3%BCgge-95174918a/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/xintamosaik" target="_blank">GitHub</a>
-    <span>Düsseldorf, Germany</span>
-
-</footer>
+    </footer>
 </body>
 
 </html>
