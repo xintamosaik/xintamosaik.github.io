@@ -106,8 +106,12 @@
             What I do
         </h2>
         <p>
-            I left my last full-time job in June 2025. I'm now looking for a role where I can apply myself to a high
-            degree. With focus, autonomy, and good people.
+            In June 2025, I left my full-time role to find a better fit — technically and culturally. I work best in
+            environments where engineers are trusted to own problems and given the autonomy to solve them well.
+
+            Since then, I've been deepening my skills, experimenting with different tools and frameworks, and building a
+            job application manager in Go. I'm now looking for a team that values thoughtful engineering, clarity, and
+            continuous improvement.
         </p>
         <p>
             I have a strong background in web development across both frontend and backend. I enjoy working with
@@ -115,84 +119,74 @@
             building things. And I like improving how we build them.
         </p>
         <p>
-            In my free time I code a lot. My current project is a web app that allows users to manage their work around
-            job applications. It is built in Golang and Templ with JSON for persistence.
+            In my free time, I code a lot. My current project is a web app to help users manage job applications. It's
+            built in Go with Templ for server-side rendering, using JSON for persistence.
         </p>
         <h2>
             What I did
         </h2>
         <p>
-            I worked as a software engineer for about 5 years, mostly in the web development space.</p>
+            I've worked as a software engineer for about five years, mostly in web development.</p>
         <p>
-            I started
-            out as a full-stack developer, building a web application for ecologists to visualize simulated pollen
-            distribution.
-            I was able to create a pipeline with C++, PHP, HTML and Javascript that allowed users to geographically plot
-            maize fields and
-            visualize the pollen distribution in a web browser. I built on a proprietary simulation engine for low
-            density particles called AUSTAL and
-            created a web interface for it.
+            I started out as a full-stack developer, building a web application for ecologists to visualise simulated
+            pollen distribution. I created a pipeline using C++, PHP, HTML, and JavaScript that let users map maize
+            fields and simulate particle spread in the browser. The simulation engine was based on AUSTAL, a model for
+            low-density particle dispersion.
         </p>
         <p>
-            This was my first experience with web development and I loved it. My biggest
-            lesson back then: Don't cook your own TIFF images, there are libraries for that.
+            It was my first experience with web development. And I loved it.
+        </p>
+        <p>
+            My biggest lesson back then: don't cook your own TIFF images. There are libraries for that.
         </p>
         <h2>
             What I build
         </h2>
         <p>
-            I like to build things. I enjoy the process more than the end result quite a lot. Recently I started and
-            ditched over twenty iterations of a web app to explore the landscape of web development. I compared
-            different languages,
-            frameworks, libraries, and tools. I tried out different approaches to state management, routing, server side
-            and client side rendering,
-            islands architecture, MVC patterns and more. Here are some of the things I learned:
+            I like building things — often more than finishing them. Recently I prototyped over twenty
+            iterations of a web app just to explore the web development landscape. I tried different languages,
+            frameworks, rendering modes, state management approaches, routing strategies, and architectural styles.
+            Here's some of what I learned:
         </p>
         <ul>
             <li>
-                There is allmost no reason to use Javascript over Typescript. Only early stages of prototyping where
-                fast feedback outweighs the advantages of types and build tools are an exception.
+                There's rarely a reason to use JavaScript over TypeScript. Exceptions are early-stage prototypes where
+                raw speed outweighs the benefits of types and tooling.
             </li>
             <li>
-                React is a power house for building user interfaces. Currently Next.js is the best framework for
-                building TypeScript exclusive web applications. While it's not perfect and nudges you to buy into
-                Vercel's ecosystem, it has a lot of features to increase UX with a DX that is hard to beat.
+                React is a powerhouse for UIs. Next.js is currently the best framework for building TypeScript-first
+                applications. It's not perfect and it nudges you into Vercel's ecosystem, but it offers excellent UX
+                with a DX that's hard to beat.
             </li>
             <li>
-                React is not the only way to build user interfaces. While it is still doable with vanilla JavaScript,
-                frameworks help. A lot. It is worth exploring alternatives. Vue and Nuxt are great alternatives to React
-                and Next.js. Nuxt has unqique features like auto imports that I really started to love.
+                React isn't the only way. Vanilla JS is still viable, but frameworks help — a lot. Vue and Nuxt are
+                great alternatives. I especially appreciated Nuxt's auto-import features.
             </li>
             <li>
-                If you haven't tried Svelte yet, I can highly recomment it. It's a blast to work with. I did not have
-                chance to try SvelteKit yet so I can't yet compare it to Next.js or Nuxt. But on the client side it is a
-                joy to code with. The svelte compiler does a lot of work for you, but the language stays pretty
-                transparent.
+                Try Svelte if you haven't. It's a joy to work with. I haven't used SvelteKit yet, so I can't compare it
+                to Next.js or Nuxt, but the client-side experience is excellent. The compiler does a lot for you while
+                keeping the language transparent.
             </li>
             <li>
-                The current highlight of my exploration is Elixir, Phoenix and LiveView. The only reason I did not fully
-                commit to it is the learning curve for Elixir and the one downside of Phoenix: It took inspiration from
-                Ruby on Rails, which introduces a lot of indirection. It sticks to MVC instead of more modern patterns
-                that I got used to love. It's a low price to pay for what you get in return: LiveView is a true
-                innovation in web development.
+                Phoenix LiveView is a standout. It's the most exciting thing I've tried in recent years. I didn't fully
+                commit only because of the Elixir learning curve and some MVC-related indirection borrowed from Rails.
+                But LiveView is a real innovation.
             </li>
             <li>
-                I also tried Laravel and Spring Boot. They are great frameworks. They are not for me though. Them
-                sticking to MVC is not the biggest problem. There is too much "magic" in them for my taste and it has
-                real costs. The stack traces are hard to follow. To be honest, Phoenix and React also suffer from this
-                problem, but I found that the advantages of Spring Boot and Laravel are not as compelling compared to
-                React or Phoenix.
-            </li>
-            <li>
-                My current implementation of the application app is written in Golang with Templ for SSR. Moving the
-                application logic to the server side reduces complexity so much that I am not yet missing frontend
-                frameworks. Since most work is done in Go, I do not even use TypeScript. I opted out of SPA though,
-                since the Transition API covers a lot of ground. The difference to a full SPA is hard to notice at least
-                in the development environment. Deployment might break the illusion.
+                Laravel and Spring Boot are solid, but not for me. They rely too much on “magic” for my taste, which
+                makes debugging painful. While React and Phoenix also have their quirks, their advantages outweigh the
+                costs — unlike Laravel and Spring Boot, which I found less compelling.
             </li>
 
 
         </ul>
+        <p>
+            Right now, my job application manager app is implemented in Go using Templ for server-side rendering.
+            Offloading logic to the server simplifies things so much that I haven't missed frontend frameworks. Since
+            most of the logic is in Go, I didn't even need TypeScript. I've also opted out of SPA entirely — the
+            Transition API covers most of what I need, and the difference is hardly noticeable in dev. Deployment might
+            break the illusion, but I'll cross that bridge when I get there.
+        </p>
     </main>
     <footer>
         <section id="contact">
