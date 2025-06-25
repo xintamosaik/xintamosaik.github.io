@@ -76,36 +76,107 @@
         a:hover {
             text-decoration: underline;
         }
-
-
     </style>
 </head>
+
 <body>
     <header>
         <section id="intro">
             <div class="container">
                 <hgroup>
                     <h1>Software Engineer</h1>
-                    <p>Hi, I'm Ulf.</p>
+
                 </hgroup>
                 <div>
-                    <p style="text-align: justify;">
-                        I'm a software engineer who came in sideways. Learned BASIC on a C64, taught myself C++, and fell into the web by way of necessity. I don’t love buzzwords but I do love systems — especially ones that surprise me. I care more about clarity than cleverness, and more about making things legible than making them cool. I think software is both communication and construction — and I’m most at home when it’s treated as both.
-                    </p>
+
                 </div>
             </div>
         </section>
     </header>
     <main>
+        <p>Hi, I'm Ulf.</p>
         <p>
-            Content is a work in progress. I’m working on a few things that I’ll share here when they’re ready.
+            I'm a software engineer who came in sideways. Learned BASIC on a C64, taught myself C++, and fell into the
+            web by way of necessity. I don't love buzzwords but I do love systems — especially ones that surprise me. I
+            care more about clarity than cleverness, and more about making things legible than making them cool. I think
+            software is both communication and construction — and I'm most at home when it's treated as both.
         </p>
+
+        <h2>
+            What I do
+        </h2>
+        <p>
+            I left my last full-time job in June 2025. I'm looking for a role where I can apply myself to a high degree.
+        </p>
+        <p>
+            I have a strong background in web development, both frontend and backend. I enjoy working with TypeScript,
+            React, and Node.js, but I'm also comfortable with other languages and frameworks. I like to build things
+            and constantly improve the way to do so.
+        </p>
+        <p>
+            In my free time I code a lot. My current project is a web app that allows users to manage their work around
+            job applications. It is built in Golang and Templ with JSON for persistence.
+        </p>
+        <h2>
+            What I did
+        </h2>
+        <p>
+            I worked as a software engineer for about 5 years, mostly in the web development space.</p>
+        <p>
+            I started
+            out as a full-stack developer, building a web application for ecologists to visualize simulated pollen
+            distribution.
+            I was able to create a pipeline with C++, PHP, HTML and Javascript that allowed users to geographically plot
+            maize fields and
+            visualize the pollen distribution in a web browser. I built on a proprietary simulation engine for low
+            density particles called AUSTAL and
+            created a web interface for it. 
+        </p>
+        <p>
+            This was my first experience with web development and I loved it. My biggest
+            lesson back then: Don't cook your own TIFF images, there are libraries for that.
+        </p>
+        <h2>
+            What I build
+        </h2>
+        <p>
+            I like to build things. I enjoy the process more than the end result quite a lot. Recently I started and 
+            ditched over twenty iterations of a web app to explore the landscape of web development. I compared different languages, 
+            frameworks, libraries, and tools. I tried out different approaches to state management, routing, server side and client side rendering, 
+            islands architecture, MVC patterns and more. Here are some of the things I learned:
+        </p>
+        <ul>
+            <li>
+                There is allmost no reason to use Javascript over Typescript. Only early stages of prototyping where fast feedback outweighs the advantages of types and build tools are an exception.
+            </li>
+            <li>
+                React is a power house for building user interfaces. Currently Next.js is the best framework for building TypeScript exclusive web applications. While it's not perfect and nudges you to buy into Vercel's ecosystem, it has a lot of features to increase UX with a DX that is hard to beat.
+            </li>
+            <li>
+                React is not the only way to build user interfaces. While it is still doable with vanilla JavaScript, frameworks help. A lot. It is worth exploring alternatives. Vue and Nuxt are great alternatives to React and Next.js. Nuxt has unqique features like auto imports that I really started to love. 
+            </li>
+            <li>
+                If you haven't tried Svelte yet, I can highly recomment it. It's a blast to work with. I did not have chance to try SvelteKit yet so I can't yet compare it to Next.js or Nuxt. But on the client side it is a joy to code with. The svelte compiler does a lot of work for you, but the language stays pretty transparent.
+            </li>
+            <li>
+                The current highlight of my exploration is Elixir, Phoenix and LiveView. The only reason I did not fully commit to it is the learning curve for Elixir and the one downside of Phoenix: It took inspiration from Ruby on Rails, which introduces a lot of indirection. It sticks to MVC instead of more modern patterns that I got used to love. It's a low price to pay for what you get in return: LiveView is a true innovation in web development. 
+            </li>
+            <li>
+                I also tried Laravel and Spring Boot. They are great frameworks. They are not for me though. Them sticking to MVC is not the biggest problem. There is too much "magic" in them for my taste and it has real costs. The stack traces are hard to follow. To be honest, Phoenix and React also suffer from this problem, but I found that the advantages of Spring Boot and Laravel are not as compelling compared to React or Phoenix.
+            </li>
+            <li>
+                My current implementation of the application app is written in Golang with Templ for SSR. Moving the application logic to the server side reduces complexity so much that I am not yet missing frontend frameworks. Since most work is done in Go, I do not even use TypeScript. I opted out of SPA though, since the Transition API covers a lot of ground. The difference to a full SPA is hard to notice at least in the development environment. Deployment might break the illusion. 
+            </li>
+         
+        
+        </ul>
     </main>
     <footer>
         <section id="contact">
             <div class="container">
                 <h2>Contact</h2>
-                <p>If you read something that resonated, feel free to reach out. I like thoughtful conversations and strange problems.</p>
+                <p>If you read something that resonated, feel free to reach out. I like thoughtful conversations and
+                    strange problems.</p>
                 <div style="display: flex; gap: 1rem; flex-wrap: wrap; ">
                     <span>Ulf Dellbrügge</span>
                     <span>Düsseldorf, Germany</span>
